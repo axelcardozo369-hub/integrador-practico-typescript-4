@@ -1,0 +1,26 @@
+{
+  "name": "practico-integrador-4",
+  "version": "1.0.0",
+  "description": "_Cardozo Axel_",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelcardozo369-hub/integrador-practico-typescript-4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/axelcardozo369-hub/integrador-practico-typescript-4/issues"
+  },
+  "homepage": "https://github.com/axelcardozo369-hub/integrador-practico-typescript-4#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
