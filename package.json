@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "tema1": "npx tsx watch ./src/tema1.ts",
-    "tema2": "npx tsx watch tema2.ts",
-    "tema3": "npx tsx watch tema3.ts",
-    "tema4": "npx tsx watch tema4.ts",
-    "tema5": "npx tsx watch tema5.ts",
-    "tema6": "npx tsx watch tema6.ts"
+    "tema2": "npx tsx watch ./src/tema2.ts",
+    "tema3": "npx tsx watch ./src/tema3.ts",
+    "tema4": "npx tsx watch ./src/tema4.ts",
+    "tema5": "npx tsx watch ./src/tema5.ts",
+    "tema6": "npx tsx watch ./src/tema6.ts"
   },
   "repository": {
     "type": "git",
