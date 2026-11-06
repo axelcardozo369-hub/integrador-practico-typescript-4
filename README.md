@@ -68,7 +68,7 @@ La diferencia clara entre ejecutar un archivo entre estos comandos son que 2 sol
 
 **¿Qué son los tipos string, number y boolean?**
 
-Los **String** son las cadenas de texto que se pueden utilizar comillas simples, dobles o reversos 
+Los **String** son las cadenas de texto que se pueden utilizar comillas simples, dobles o reversos
 
 const saludo1: string = "hola"
 
@@ -82,12 +82,11 @@ const entero: number = 1;
 
 const decimal: number = 1.5
 
-Los **booleam** son los verdaderos y falsos 
+Los **booleam** son los verdaderos y falsos
 
 const verdadero: boolean = true
 
 const falso: boolean = false
-
 
 **¿Cómo se declara un array con tipo?**
 
@@ -111,7 +110,7 @@ Otros ejemplos:
 
 let id:number | string = 10
 
-id acepta tanto valores numméricos como cadenas de texto 
+id acepta tanto valores numméricos como cadenas de texto
 
 led id: number | string ="10"
 
@@ -122,22 +121,46 @@ const arrelgo:(number | string)[] = [1,2,3, "hola mundo"]
 
 Evitar **any** se recomienda por que desactiva las comprobaciones de tipos y que oculta errores que el compilador podria detectar. Tambien usar any convierte el compilador en complice de errores que aparecen en produccion
 
-
 ### Tema 4: Funciones
 
 **¿Cómo se indican los tipos de los parámetros?**
 
+Para poder indicar los tipos de parámetros se utiliza la sintaxis nombre: tipo , escrita despues de cada parámetro dentro de los parentesis de la funcion por ejemplo :
+
+function sumar(a: number, b: number): number {
+return a + b;
+}
+
+    acá a y b son parámetros de tipo number . El number que está despues de los parentesis indica tipo del valor que devuelve la funcion
+
 **¿Cómo se indica el tipo de retorno?**
+
+El tipo de retorno se indica justo antes de la llave de la lalve de apertura del cuerpo de la funcion. Typescript valida internamente qye todos los caminos de la ejecucion de la funcion if/else,switch devuelvan un valor que coincida con el tipo declarado
+
+function esMayorDeEdad(edad: number): boolean {
+
+if (edad >= 18) {
+
+return true;
+
+}
+
+return false; // Si se omite este return, TypeScript arrojará un error
+}
 
 **¿Qué es un parámetro opcional?**
 
+Un parámetro opcional seria un mecanismo formal que introduce TypeScript para poder permitir flexibilidad sin perder la seguridad del tipado estático
+
 **¿Qué es un parámetro por defecto?**
+
+Una alternativa al comportamiento predeterminado de JavaScript, donde si no pasas un argumento, la variable toma automáticamente el valor undefined
 
 ---
 
 ### Tema 5: Interfaces y type
 
-**¿Qué es una interfaz y para qué sirve?**
+**¿Qué es una interfaz y para qué sirve?**git
 
 **¿Qué es un type?**
 
@@ -179,6 +202,8 @@ Evitar **any** se recomienda por que desactiva las comprobaciones de tipos y que
 
 - https://dev.to/duxtech/fundamentos-de-typescript-7-union-de-tipos-y-type-alias-4o5e
 
--  https://www.dominicode.com/posts/dejar-de-usar-any-en-typescript
- 
- - 
+- https://www.dominicode.com/posts/dejar-de-usar-any-en-typescript
+
+- https://esdocu.com/typescript/funciones-en-typescript
+
+- https://esdocu.com/typescript/funciones-en-typescript
