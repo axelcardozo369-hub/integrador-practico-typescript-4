@@ -126,17 +126,16 @@ Evitar **any** se recomienda por que desactiva las comprobaciones de tipos y que
 **¿Cómo se indican los tipos de los parámetros?**
 
 Para poder indicar los tipos de parámetros se utiliza la sintaxis nombre: tipo , escrita despues de cada parámetro dentro de los parentesis de la funcion por ejemplo :
-
-function sumar(a: number, b: number): number {
+`function sumar(a: number, b: number): number {
 return a + b;
-}
-
-    acá a y b son parámetros de tipo number . El number que está despues de los parentesis indica tipo del valor que devuelve la funcion
+}`
+acá a y b son parámetros de tipo number . El number que está despues de los parentesis indica tipo del valor que devuelve la funcion
 
 **¿Cómo se indica el tipo de retorno?**
 
 El tipo de retorno se indica justo antes de la llave de la lalve de apertura del cuerpo de la funcion. Typescript valida internamente qye todos los caminos de la ejecucion de la funcion if/else,switch devuelvan un valor que coincida con el tipo declarado
 
+```
 function esMayorDeEdad(edad: number): boolean {
 
 if (edad >= 18) {
@@ -147,6 +146,7 @@ return true;
 
 return false; // Si se omite este return, TypeScript arrojará un error
 }
+```
 
 **¿Qué es un parámetro opcional?**
 
