@@ -36,7 +36,7 @@ La version actual de **TypeScript** es la 7.0.2 que fue lanzada el 19/10/26
 
 **¿Cómo se instala TypeScript en un proyecto?**
 
-PPara instalar **TypeScript** primero necesitamos tener instalado **Node.js**.
+Para instalar **TypeScript** primero necesitamos tener instalado **Node.js**.
 Luego creamos una carpeta para el proyecto (con el nombre que queramos),
 entramos a ella e iniciamos el proyecto:
 
@@ -68,13 +68,60 @@ La diferencia clara entre ejecutar un archivo entre estos comandos son que 2 sol
 
 **¿Qué son los tipos string, number y boolean?**
 
+Los **String** son las cadenas de texto que se pueden utilizar comillas simples, dobles o reversos 
+
+const saludo1: string = "hola"
+
+const saludo2: string = 'hola'
+
+const saludo3: string = `hola`
+
+Los **number** son los tipos de datos de forma numerico que representan los enteros y decimales por ejemplo
+
+const entero: number = 1;
+
+const decimal: number = 1.5
+
+Los **booleam** son los verdaderos y falsos 
+
+const verdadero: boolean = true
+
+const falso: boolean = false
+
+
 **¿Cómo se declara un array con tipo?**
+
+Para declarar un **array** podemos hacerlo de 2 formas , la primera e indicando el tipo de elementos del array y añadiendo un operador []
+
+let miarray: number[] = [1,2,3,4,5];
+
+La segunda forma seria en definir el array mediante en la clase Array , siguiendo con la siguiente estructura:
+
+let otroarray: Array = [1,2,3,4,5];
 
 **¿Qué es un tipo unión?**
 
+El tipo **unión** es una forma de declarar un objecto que podria ser mas de un tipo
+
+Para usar la unión de tipos basta con separar los tipos de datos con un pipe |, de la siguiente manera:
+
+let nombreVariable: tipoA | tipoB | tipoN = valor;
+
+Otros ejemplos:
+
+let id:number | string = 10
+
+id acepta tanto valores numméricos como cadenas de texto 
+
+led id: number | string ="10"
+
+También podemos usar unión de tipos en arreglos:
+
+const arrelgo:(number | string)[] = [1,2,3, "hola mundo"]
 **¿Por qué se recomienda evitar any?**
 
----
+Evitar **any** se recomienda por que desactiva las comprobaciones de tipos y que oculta errores que el compilador podria detectar. Tambien usar any convierte el compilador en complice de errores que aparecen en produccion
+
 
 ### Tema 4: Funciones
 
@@ -126,4 +173,12 @@ La diferencia clara entre ejecutar un archivo entre estos comandos son que 2 sol
 
 - documento oficial de TL2 que paso el profe Agustin en Classroom
 
--
+- https://normeno.medium.com/tipos-de-datos-en-typescript-d67482f2da6c
+
+- https://lineadecodigo.com/typescript/arrays-en-typescript/
+
+- https://dev.to/duxtech/fundamentos-de-typescript-7-union-de-tipos-y-type-alias-4o5e
+
+-  https://www.dominicode.com/posts/dejar-de-usar-any-en-typescript
+ 
+ - 
