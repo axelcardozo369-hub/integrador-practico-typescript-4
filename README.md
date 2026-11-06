@@ -160,15 +160,36 @@ Una alternativa al comportamiento predeterminado de JavaScript, donde si no pasa
 
 ### Tema 5: Interfaces y type
 
-**¿Qué es una interfaz y para qué sirve?**git
+**¿Qué es una interfaz y para qué sirve?**
+
+Una **interfaz** (`interface`) describe la forma que tiene un objeto: qué propiedades tiene y de qué tipo es cada una. Sirve para que TypeScript verifique que los objetos cumplan con esa estructura y avise si falta una propiedad o si el tipo es incorrecto.
+
+```
+interface Usuario {
+      id: number;
+      nombre: string;
+      email: string;
+      edad?: number;            // opcional
+      readonly createdAt: Date; // solo lectura
+    }
+
+```
+
+Las interfaces se pueden extender con `extends` para reutilizar propiedades, y solo existen mientras se escribe el código: no quedan en el JavaScript generado.
 
 **¿Qué es un type?**
 
+un **type** es un alias que se le da un tipo para poder reutilizarlo. Se usa sobre todo para uniones (`string | number`), intersecciones (`&`), tipos literales (`"ADMIN" | "USER"`) y alias de tipos primitivos.
+
 **¿Cómo se declara una propiedad opcional?**
+
+una propiedad opcional es una propiedad de un objecto que puede estar o no. Se declara agregando un signo de pregunta (?) después del nombre de la propiedad, dentro de una interface o de un type.
 
 **¿Cuándo conviene usar cada uno?**
 
----
+Conviene usar interface cuando se quiere describir la forma de un objeto, por ejemplo los datos de un alumno o de un producto. También es útil cuando un objeto tiene que heredar propiedades de otro, porque se puede extender fácilmente con extends.
+
+Conviene usar type cuando se necesita algo que no sea solo un objeto, por ejemplo un tipo unión ("activo" | "inactivo"), darle otro nombre a un tipo primitivo, o combinar varios tipos.
 
 ### Tema 6: Enums y tipos literales
 
