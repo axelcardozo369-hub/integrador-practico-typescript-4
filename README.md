@@ -22,7 +22,7 @@ _Cardozo Axel_
 
 La diferencia que tiene **TypeScript** con **JavaScript** es que TypeScript es de tipo estático, genérico y estructural que a diferencia con Javascript no es eso , sino que es de tipado dinámico .
 
-Otra diferencias seria que TypesScript tiene la sintaxis en orientacion de objectos, mientras que JavaScript no , tambien TypeScript ofrece soporte directo para módulos, mientras que JavaScript trabaja a través de ECMAScript 6
+Otra diferencias seria que TypesScript tiene la sintaxis en orientacion de objetos, mientras que JavaScript no , tambien TypeScript ofrece soporte directo para módulos, mientras que JavaScript trabaja a través de ECMAScript 6
 
 **¿Qué ventajas ofrece?**
 
@@ -100,7 +100,7 @@ let otroarray: Array = [1,2,3,4,5];
 
 **¿Qué es un tipo unión?**
 
-El tipo **unión** es una forma de declarar un objecto que podria ser mas de un tipo
+El tipo **unión** es una forma de declarar un objeto que podria ser mas de un tipo
 
 Para usar la unión de tipos basta con separar los tipos de datos con un pipe |, de la siguiente manera:
 
@@ -195,11 +195,33 @@ Conviene usar type cuando se necesita algo que no sea solo un objeto, por ejempl
 
 **¿Qué es un enum?**
 
+Un enum es un conjunto de constantes con nombre. enum Direction {Up, Down, Left, Right } crea a la vez un tipo, Direction, y un objecto en tiempo de ejecucion a cuyos mienbros accedes como Direction.Up. Los miembros se numeran desde 0 salvo que les des valores, y los enums de string dan a cada miembro un string legible.
+
 **¿Qué es un tipo literal?**
+
+Es un tipo que acepta valores exactos, no cualquier string o number. Casi siempre se combina con la unión |
 
 **¿En qué se parecen y en qué se diferencian?**
 
+Se parecen en que los dos sirven para limitar los valores que puede tener una variable o un parámetro. Si se intenta usar un valor que no está permitido, TypeScript muestra un error antes de ejecutar el programa.
+
+lo que se diferencia es :
+
+- Existencia en JavaScript: el enum se convierte en un objeto real en el JavaScript compilado, mientras que el tipo literal desaparece al compilar, porque solo sirve para revisar el código.
+
+- Forma de uso: con un enum se accede a los valores con un punto (Semaforo.Verde). Con un tipo literal se escribe el valor directamente ("verde").
+
+- Recorrer los valores: como el enum existe en tiempo de ejecución, se pueden recorrer sus valores con Object.values(). Con un tipo literal no se puede.
+
+- Simplicidad: el tipo literal es más corto y simple de escribir.
+
 **¿En qué situaciones se puede usar cada uno?**
+
+Conviene usar un enum cuando se necesita un grupo de valores fijos que el programa tenga que usar mientras se ejecuta. Como el enum existe en el JavaScript final, se pueden recorrer sus valores, mostrarlos en un menú o usarlos en un switch. Por ejemplo se usa cuando solo se quiere restringir qué valores acepta una variable, como talles o colores
+
+- Los estados de un pedido (pendiente, enviado, entregado).
+- Los roles de un usuario (administrador, cliente, invitado).
+- Los niveles de dificultad de un juego (fácil, medio, difícil).
 
 ---
 
@@ -227,4 +249,4 @@ Conviene usar type cuando se necesita algo que no sea solo un objeto, por ejempl
 
 - https://esdocu.com/typescript/funciones-en-typescript
 
-- https://esdocu.com/typescript/funciones-en-typescript
+- https://coddy.tech/docs/es/typescript/enums
